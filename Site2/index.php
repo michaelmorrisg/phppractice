@@ -28,5 +28,37 @@
         <input name="name"/>
         <input type="submit" value="Submiter"/>
     </form>
+    <?php 
+    $randomThings = [1,3, "3", "december", "crazy", " "];
+
+    foreach($randomThings as $randomThing){
+        if (is_string($randomThing)){
+            echo $randomThing . "is a string <br/>";
+        }
+    }
+    
+    ?>
+        <?php  $loggedIn = false ?>
+
+    <?php   if($loggedIn) { ?>
+    <h1>Welcome Man!</h1>
+    <?php }?>
+
+
+
+    <?php 
+    
+    $email = $_POST['email'];
+    $newName = $_POST['name'];
+
+    echo $email;
+    echo $newName;
+    
+    ?>
+    <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <input type="text" name="email"/>
+        <input type="text" name="name"/>
+        <input value="Submit" type="submit"/>
+    </form>
 </body>
 </html>
